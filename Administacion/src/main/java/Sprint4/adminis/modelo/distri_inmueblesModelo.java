@@ -2,6 +2,8 @@ package Sprint4.adminis.modelo;
 
 import java.io.Serializable;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -11,23 +13,8 @@ import javax.persistence.Table;
 public class distri_inmueblesModelo implements Serializable {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_apartamento;
     private Long No_apto;
-
-    public Long getNo_apto() {
-        return No_apto;
-    }
-
-    public void setNo_apto(Long No_apto) {
-        this.No_apto = No_apto;
-    }
-
-    public Long getId_apartamento() {
-        return id_apartamento;
-    }
-
-    public void setId_apartamento(Long id_apartamento) {
-        this.id_apartamento = id_apartamento;
-    }
 
 }
